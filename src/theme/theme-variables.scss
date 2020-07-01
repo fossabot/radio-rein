@@ -41,9 +41,8 @@ $cyan: #04beaf;
 $bgColorLight: #f1f3f4;
 $bgColorDark: #141317;
 
-$primary: $purple;
-$secondary: $black;
-$bgTint: rgba(112, 112, 112, 0.1);
+$primary: $black;
+$secondary: $purple;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
@@ -63,109 +62,6 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    body {
-      background-color: $black;
-      color: $white;
-    }
-    .recording__list__text__container a h5 {
-      color: $white;
-    }
-    .recording__list__text__container a h6 {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .currentWidget {
-      background: $black;
-    }
-    button {
-      color: $white;
-    }
-    .btn-secondary {
-      border: 2px dashed $white;
-      background: transparent;
-      color: $white;
-    }
-    hr {
-      border-top: 1px #3c4148 dotted;
-    }
-    ::placeholder {
-      /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: $white;
-      opacity: 1; /* Firefox */
-    }
-    :-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: $white;
-    }
-    ::-ms-input-placeholder {
-      /* Microsoft Edge */
-      color: $white;
-    }
-    input {
-      caret-color: white;
-    }
-    input.ais-SearchBox-input {
-      color: #fff !important;
-    }
-    .bmc-button {
-      color: #ff813f !important;
-      background-color: #000000 !important;
-      border: 1px solid #ff813f !important;
-    }
-    .dropdown-menu {
-      background-color: #262b33;
-    }
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-      color: $white;
-      text-decoration: none;
-      background-color: rgba(248, 249, 250, 0.05);
-      outline: none;
-    }
-    .main-current h1 {
-      font-size: 20px;
-      color: #fff !important;
-    }
-
-    .main-current p {
-      font-size: 13px;
-      margin-top: 0;
-      color: #fff !important;
-    }
-
-    .single__recording__list {
-      background: #111111;
-      color: $white;
-    }
-
-    .single__recording__list:hover {
-      background: #1c1c1c;
-      color: $white;
-    }
-
-    .recording__list__text__container__tags::after {
-      color: rgba(112, 122, 122, 0.99);
-    }
-
-    .single__show__list {
-      background: #111111;
-      color: $white;
-    }
-
-    .single__show__list:hover {
-      background: #1c1c1c;
-      color: $white;
-    }
-
-    .load-spinner svg circle {
-      fill: $white;
-    }
-
-    .recording__list__text__container {
-      color: $white;
-    }
-    .ais-RefinementList-count {
-      background-color: rgba(0, 0, 255, 0.2);
-    }
   }
 }
 

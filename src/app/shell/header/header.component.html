@@ -11,7 +11,9 @@
       (click)="toggleMenu()"
       [attr.aria-expanded]="!menuHidden"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars" style="font-size: 30px;"></i>
+      </span>
     </button>
     <div
       id="navbar-menu"
@@ -19,14 +21,6 @@
       [ngbCollapse]="menuHidden"
     >
       <div class="navbar-nav">
-        <a
-          class="nav-item nav-link"
-          routerLink="/search"
-          routerLinkActive="active"
-          (click)="closeMenu()"
-        >
-          <span translate>SEARCH</span>
-        </a>
         <a
           class="nav-item nav-link"
           routerLink="/broadcasts"
@@ -51,39 +45,13 @@
         >
           <span translate>SCHEDULE</span>
         </a>
-        <a
-          class="nav-item nav-link"
-          href="https://radio-rasclat.chatango.com/"
-          target="_blank"
-        >
-          <span translate>CHAT</span>
-        </a>
-        <!-- <a
-          class="nav-item nav-link"
-          routerLink="/search"
-          routerLinkActive="active"
-          (click)="closeMenu()"
-        >
-          <span translate>SEARCH</span>
-        </a> -->
       </div>
       <div class="navbar-nav ml-auto">
         <span *ngIf="liveInfo" class="nav-item nav-link live-indicator">
           <button class="pulse-button"></button> LIVE
         </span>
         <div class="nav-item" ngbDropdown placement="bottom-right">
-          <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{
-            currentLanguage
-          }}</a>
-          <div ngbDropdownMenu aria-labelledby="language-dropdown">
-            <button
-              class="dropdown-item"
-              *ngFor="let language of languages"
-              (click)="setLanguage(language)"
-            >
-              {{ language }}
-            </button>
-          </div>
+          Live Info
         </div>
       </div>
     </div>
