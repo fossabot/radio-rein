@@ -17,14 +17,21 @@ body {
   background-attachment: fixed;
   background-color: #ffffff;
   font-size: 1.75rem;
+  margin-bottom: 180px;
+  color: #000;
 }
 
 h1 {
   font-size: 3.5rem;
 }
 
-.btn {
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover {
   border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
 .navbar {
@@ -64,7 +71,7 @@ a.nav-item,
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.07;
+  opacity: 0.11;
 }
 
 .carousel-caption a {
@@ -98,4 +105,24 @@ hr {
 
 figure {
   margin: 0;
+}
+
+img.recording__artists__single__image {
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.currentWidget {
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  border-top: 4px solid #000;
+  min-height: 88px;
+  padding: 5px 15px;
+}
+
+.carousel-caption {
+  text-shadow: 0px 1px 1px #000;
 }
