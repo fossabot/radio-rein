@@ -126,3 +126,21 @@ img.recording__artists__single__image {
 .carousel-caption {
   text-shadow: 0px 1px 1px #000;
 }
+
+span.recording__list__text__container__tags {
+  font-size: 1rem;
+  padding: 8px;
+  background: #000;
+  margin: 0 0 0 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 100;
+}
+
+span.recording__list__text__container__tags a {
+  color: #fff !important;
+}
+
+.timeline {
+  font-size: 1rem;
+}

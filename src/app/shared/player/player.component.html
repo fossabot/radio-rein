@@ -5,6 +5,7 @@
         <div style="display: table-cell; vertical-align: middle; width: 80px;">
           <button
             class="btn btn-primary"
+            style="min-width: 66px;"
             (click)="play()"
             [disabled]="state?.error"
             *ngIf="!state?.playing"
@@ -14,6 +15,7 @@
 
           <button
             class="btn btn-primary"
+            style="min-width: 66px;"
             (click)="pause()"
             *ngIf="state?.playing"
           >
