@@ -5,7 +5,7 @@ import { StreamState } from '../../interfaces/stream-state';
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss']
+  styleUrls: ['./player.component.scss'],
 })
 export class PlayerComponent {
   files: Array<any> = [];
@@ -15,7 +15,7 @@ export class PlayerComponent {
 
   constructor(private audioService: AudioService) {
     // listen to stream state
-    this.audioService.getState().subscribe(state => {
+    this.audioService.getState().subscribe((state) => {
       this.state = state;
     });
   }
@@ -23,7 +23,7 @@ export class PlayerComponent {
   playStream(url: string, detailUrl: string, title: string, image: string) {
     this.audioService
       .playStream(url, detailUrl, title, image)
-      .subscribe(events => {
+      .subscribe((events) => {
         // listening for fun here
       });
   }

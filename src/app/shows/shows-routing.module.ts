@@ -10,18 +10,18 @@ const routes: Routes = [
     {
       path: 'shows',
       component: ShowsComponent,
-      data: { title: 'Radio Rein • Shows' }
+      data: { title: 'Radio Rein • Shows' },
     },
     {
       path: 'shows/:id',
-      component: ShowsSingleComponent
-    }
-  ])
+      component: ShowsSingleComponent,
+    },
+  ]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class ShowsRoutingModule {}

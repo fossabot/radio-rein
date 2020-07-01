@@ -5,7 +5,7 @@ import * as moment from 'moment';
 import { StreamState } from '../interfaces/stream-state';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AudioService {
   audioEvents = [
@@ -17,7 +17,7 @@ export class AudioService {
     'timeupdate',
     'canplay',
     'loadedmetadata',
-    'loadstart'
+    'loadstart',
   ];
   private stop$ = new Subject();
   private audioObj = new Audio();
@@ -31,10 +31,10 @@ export class AudioService {
       currentSrc: '',
       currentImage: '',
       currentTitle: '',
-      currentUrl: ''
+      currentUrl: '',
     },
     canplay: false,
-    error: false
+    error: false,
   };
 
   private stateChange: BehaviorSubject<StreamState> = new BehaviorSubject(
@@ -74,7 +74,7 @@ export class AudioService {
   }
 
   private streamObservable(url: string) {
-    return new Observable(observer => {
+    return new Observable((observer) => {
       // Play audio
       this.audioObj.src = url;
       this.audioObj.load();
@@ -103,7 +103,7 @@ export class AudioService {
     events: Array<string>,
     handler: any
   ) {
-    events.forEach(event => {
+    events.forEach((event) => {
       obj.addEventListener(event, handler);
     });
   }
@@ -113,7 +113,7 @@ export class AudioService {
     events: Array<string>,
     handler: any
   ) {
-    events.forEach(event => {
+    events.forEach((event) => {
       obj.removeEventListener(event, handler);
     });
   }
@@ -159,10 +159,10 @@ export class AudioService {
         currentSrc: '',
         currentImage: '',
         currentTitle: '',
-        currentUrl: ''
+        currentUrl: '',
       },
       canplay: false,
-      error: false
+      error: false,
     };
   }
 }

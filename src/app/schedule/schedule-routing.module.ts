@@ -9,14 +9,14 @@ const routes: Routes = [
     {
       path: 'schedule',
       component: ScheduleComponent,
-      data: { title: 'Radio Rein • Schedule' }
-    }
-  ])
+      data: { title: 'Radio Rein • Schedule' },
+    },
+  ]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class ScheduleRoutingModule {}

@@ -9,14 +9,14 @@ const routes: Routes = [
     {
       path: '',
       component: HomeComponent,
-      data: { title: 'Radio Rein • Bass. Music. Live.' }
-    }
-  ])
+      data: { title: 'Radio Rein • Bass. Music. Live.' },
+    },
+  ]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class HomeRoutingModule {}

@@ -9,14 +9,14 @@ const routes: Routes = [
     {
       path: 'search',
       component: SearchComponent,
-      data: { title: 'Radio Rein • Search' }
-    }
-  ])
+      data: { title: 'Radio Rein • Search' },
+    },
+  ]),
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [],
 })
 export class SearchRoutingModule {}

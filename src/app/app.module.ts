@@ -34,7 +34,7 @@ import { environment } from '@env/environment';
 import * as Sentry from '@sentry/browser';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal'
+  direction: 'horizontal',
 };
 
 @Injectable()
@@ -48,8 +48,8 @@ export class SentryErrorHandler implements ErrorHandler {
       ignoreErrors: [
         'ERR_CONNECTION_REFUSED',
         'Es is',
-        'Es ist ein Fehler aufgetreten'
-      ]
+        'Es ist ein Fehler aufgetreten',
+      ],
     });
   }
   handleError(error: any) {
@@ -63,7 +63,7 @@ export class SentryErrorHandler implements ErrorHandler {
     BrowserModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('./ngsw-worker.js', {
-      enabled: environment.production
+      enabled: environment.production,
     }),
     FormsModule,
     HttpClientModule,
@@ -84,19 +84,19 @@ export class SentryErrorHandler implements ErrorHandler {
     TimeagoModule.forRoot(),
     IconsModule,
     LazyLoadImageModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route,
+    AppRoutingModule, // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
   providers: [
     {
       provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
+      useValue: DEFAULT_SWIPER_CONFIG,
     },
     {
       provide: ErrorHandler,
-      useClass: SentryErrorHandler
-    }
+      useClass: SentryErrorHandler,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
