@@ -36,8 +36,8 @@
           <a class="show__link" routerLink="/broadcasts/{{ recording?.slug }}">
             <h4>
               {{
-                recording?.title.length > 40
-                  ? (recording?.title | slice: 0:40) + '...'
+                recording?.title.length > 30
+                  ? (recording?.title | slice: 0:30) + '...'
                   : recording?.title
               }}
             </h4>
