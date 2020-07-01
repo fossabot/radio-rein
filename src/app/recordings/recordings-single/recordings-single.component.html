@@ -1,0 +1,110 @@
+<div class="grid" *ngIf="isLoading == true">
+  <div class="col-12@xs">
+    <app-loader></app-loader>
+  </div>
+</div>
+<div class="grid" *ngIf="isLoading == false">
+  <div class="col-3@sm">
+    <figure class="square">
+      <img
+        [defaultImage]="defaultImage"
+        [lazyLoad]="recording?.image"
+        alt="{{ recording?.title }}"
+        style="width: 100%"
+      />
+    </figure>
+    <div style="margin-top: 20px">
+      <a
+        class="btn btn-primary"
+        [style.backgroundColor]="hex"
+        href="{{ recording.audio }}"
+        angulartics2On="click"
+        angularticsAction="DownloadClick"
+        [angularticsCategory]="recording.slug"
+      >
+        <i-feather name="download"></i-feather>
+        Download
+      </a>
+      <button
+        class="btn btn-primary"
+        [style.backgroundColor]="hex"
+        (click)="play()"
+        [disabled]="state?.error"
+        *ngIf="
+          !state?.playing ||
+          state.currentTrack.currentSrc != this.recording.audio
+        "
+      >
+        <i-feather name="play"></i-feather>
+        Play
+      </button>
+      <button
+        class="btn btn-primary"
+        [style.backgroundColor]="hex"
+        (click)="pause()"
+        *ngIf="
+          state?.playing &&
+          state.currentTrack.currentSrc == this.recording.audio
+        "
+      >
+        <i-feather name="pause"></i-feather>
+        Pause
+      </button>
+    </div>
+  </div>
+  <div class="col-9@sm">
+    <h1 [style.color]="hex">
+      <span>{{ recording?.title }}</span>
+    </h1>
+    <h6 class="recording__artists">
+      <span
+        *ngFor="let artist of recording.artists"
+        class="recording__artists__single"
+      >
+        <img
+          class="recording__artists__single__image"
+          [defaultImage]="defaultImage"
+          [lazyLoad]="artist?.image"
+          tooltip="{{ artist.title }}"
+          [options]="{
+            placement: 'top',
+            'hide-delay': 0,
+            'hide-delay-mobile': 0,
+            'animation-duration': 0
+          }"
+        />
+      </span>
+    </h6>
+    <h6 style="padding-top: 4px;">
+      <strong>
+        <a [style.color]="hex" routerLink="/shows/{{ recording?.show.slug }}">{{
+          recording?.show.title
+        }}</a></strong
+      >
+    </h6>
+    <h6 style="color:rgba(112,122,122,0.99)">
+      {{ recording.timeStart | date: 'dd.MM.yyyy' }},
+      {{ recording.timeStart | date: 'HH:mm' }} -
+      {{ recording.timeEnd | date: 'HH:mm' }}
+    </h6>
+    <div
+      class="recording__list__text__container__tag__wrapper"
+      style="
+      padding-bottom: 9px;"
+    >
+      <span
+        class="recording__list__text__container__tags"
+        *ngFor="let genre of recording.genres"
+      >
+        <a
+          [style.color]="hex"
+          routerLink="/search"
+          [queryParams]="{ 'refinementList[genres.title][0]': genre.title }"
+          >{{ genre.title }}</a
+        >
+      </span>
+    </div>
+    <p style="margin-top: 10px;" [innerHTML]="recording?.description"></p>
+  </div>
+  <div class="col-12"></div>
+</div>
