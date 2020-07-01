@@ -10,7 +10,7 @@ const routes: Routes = [
     {
       path: 'shows',
       component: ShowsComponent,
-      data: { title: 'Radio Rasclat • Shows' }
+      data: { title: 'Radio Rein • Shows' }
     },
     {
       path: 'shows/:id',
