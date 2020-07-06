@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpCacheInterceptorModule } from '@ngneat/cashew';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -67,6 +68,7 @@ export class SentryErrorHandler implements ErrorHandler {
     }),
     FormsModule,
     HttpClientModule,
+    HttpCacheInterceptorModule.forRoot(),
     TranslateModule.forRoot(),
     NgbModule,
     CoreModule,
