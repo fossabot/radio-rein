@@ -1,6 +1,12 @@
-<div class="container-fluid" *ngIf="isLoading == true">
-  <div class="col-12">
-    <app-loader></app-loader>
+<div
+  class="container-fluid"
+  *ngIf="isLoading == true"
+  style="background: #ffffff; padding-top: 80px;"
+>
+  <div class="row">
+    <div class="col-12">
+      <app-loader></app-loader>
+    </div>
   </div>
 </div>
 <div *ngIf="isLoading == false" style="background: #fff;">
