@@ -1,4 +1,4 @@
-<div align="center"><img src="https://assets.dmnktoe.de/radio-rasclat/logo/logo.svg" width="140"></div>
+<div align="center"><img src="http://r-ein.de/wp-content/uploads/2020/06/rein.png" width="140"></div>
 
 # Radio Rein
 
