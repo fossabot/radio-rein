@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-xl fixed-top">
     <a class="navbar-brand" routerLink="/" translate>
-      Radio Rein
+      R:ADIO R:EIN
     </a>
     <button
       class="navbar-toggler"
@@ -27,7 +27,7 @@
           routerLinkActive="active"
           (click)="closeMenu()"
         >
-          <span translate>RECORDINGS</span>
+          <span>Aufnahmen</span>
         </a>
         <a
           class="nav-item nav-link"
@@ -35,7 +35,7 @@
           routerLinkActive="active"
           (click)="closeMenu()"
         >
-          <span translate>SCHEDULE</span>
+          <span>Programm</span>
         </a>
       </div>
       <div class="navbar-nav ml-auto">
@@ -43,7 +43,14 @@
           <button class="pulse-button"></button> LIVE
         </span>
         <div class="nav-item" ngbDropdown placement="bottom-right">
-          Live Info
+          <a
+            class="nav-item nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+          >
+            <span>Info</span>
+          </a>
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { NgAisModule } from 'angular-instantsearch';
 import { RecordingsModule } from '@app/recordings/recordings.module';
-import { ShowsModule } from '@app/shows/shows.module';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { ShowsModule } from '@app/shows/shows.module';
     SearchRoutingModule,
     NgAisModule,
     RecordingsModule,
-    ShowsModule,
   ],
   declarations: [SearchComponent],
 })

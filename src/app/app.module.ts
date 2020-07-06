@@ -17,7 +17,6 @@ import { RecordingsModule } from './recordings/recordings.module';
 import { ScheduleModule } from '@app/schedule/schedule.module';
 import { SearchModule } from './search/search.module';
 import { ShellModule } from './shell/shell.module';
-import { ShowsModule } from './shows/shows.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IconsModule } from '@app/shared/icons/icons.module';
@@ -76,7 +75,6 @@ export class SentryErrorHandler implements ErrorHandler {
     ShellModule,
     HomeModule,
     RecordingsModule,
-    ShowsModule,
     AboutModule,
     SearchModule,
     ScheduleModule,
