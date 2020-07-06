@@ -34,13 +34,13 @@
             </small>
           </div>-->
           <a class="show__link" routerLink="/broadcasts/{{ recording?.slug }}">
-            <h4>
+            <h3>
               {{
-                recording?.title.length > 30
-                  ? (recording?.title | slice: 0:30) + '...'
+                recording?.title.length > 35
+                  ? (recording?.title | slice: 0:35) + '...'
                   : recording?.title
               }}
-            </h4>
+            </h3>
             <h6 [hidden]="recording?.views">
               {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
               {{ recording?.timeStart | date: 'HH:mm' }}
